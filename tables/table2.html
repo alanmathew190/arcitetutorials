@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  
+  table{
+    background-color: bisque;
+  }
+table,th,td{
+    /* border: 1px solid black; */
+    border-collapse: collapse;
+    /* border-radius: 50px; */
+}
+
+table{
+    width: 100%;
+    text-align: center;
+}
+th,td{
+    height: 50px;
+    vertical-align:bottom;
+    padding: 20px;
+    border-right: 1px solid black; 
+}
+th{
+    /* background-color: aqua; */
+}
+td{
+    /* background-color: aquamarine; */
+}
+th:hover{
+
+    background-color: blue; 
+    transform: scale(1.1);
+    transition: .7s;
+}
+table:hover{
+    border: 1px solid black;
+}
+tr:nth-child(odd){
+    background-color: brown;
+}
+
+/* links css */
+.g{
+    background-color: aqua;
+    cursor: crosshair;
+}
+.y{
+    background-color: blue;
+    color: white;
+    cursor: all-scroll;
+}
+.yt{
+    text-decoration: none;
+    border: 1px solid black ;
+    color:blue;
+    cursor: cell;
+}
+.y,.g,.yt{
+    font-size: 20px;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.y:hover{
+   background-color: aqua;
+   color:black;
+}
+.yt:hover{
+    background-color: rgb(30, 119, 89);
+    color:#ffffff;
+}
+
+</style>
+
+<body>
+    
+
+    <track>
+<p>hello</p>
+
+</track>
+<table>
+
+<tr>
+    <th>Sl no</th>
+    <th>Item</th>
+    <th>Quantity</th>
+    <th>Price</th>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td>Apple</td>
+    <td>10</td>
+    <td>100</td>
+</tr>
+<tr>
+    <td>1</td>
+    <td>Orange</td>
+    <td>10</td>
+    <td>100</td>
+</tr>
+<tr>
+    <td>1</td>
+    <td>Grapes</td>
+    <td>10</td>
+    <td>100</td>
+</tr>
+
+</table>
+
+<br><br>
+<a href="" class="g">google</a>
+<a href="" class="y">Yahoo</a>
+<a href="" class="yt">Youtube</a>
+
+</body>
+</html>

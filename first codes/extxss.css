@@ -1,0 +1,34 @@
+
+
+h2{
+   color: purple;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   width: fit-content;
+   border: 3px solid black;
+   
+   margin-top: 20px;
+   background-color: #fff200;
+}
+ h3{
+    color: rgb(50, 248, 39);
+    text-align: center;
+    background-color: #49889d;
+    width:fit-content;
+    
+ }
+
+ a{
+    color: rgb(222, 67, 93);
+    text-decoration: none;
+ }
+ img{
+    width: 300px;
+    margin-left: 375px;
+ }
+
+ body{
+    background-image: url(/images/sample.jpg);
+    background-repeat:no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+ }
