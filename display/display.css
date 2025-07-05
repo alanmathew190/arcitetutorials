@@ -1,0 +1,75 @@
+body {
+
+    padding: 0;
+    font-family: Bitcount Grid Double;
+}
+
+
+li {
+    display: inline-block;
+    padding: 20px;
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+}
+
+img {
+    display: block;
+    border: 1px solid black;
+    margin: auto;
+    height: 200px;
+    width: 400px;
+    margin-top: 10px;
+
+
+}
+
+#n {
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    top: 90px;
+    left: 165px;
+    opacity: 0.6;
+}
+
+.box1 {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+#b {
+    visibility: hidden;
+}
+
+a {
+    padding: 20px;
+    color: rgb(199, 28, 28);
+    font-size: 30px;
+}
+
+a:hover {
+    color: rgb(201, 214, 217);
+}
+
+a:active {
+    color: chartreuse;
+}
+
+p::first-line{
+    color: brown;
+}
+h2::first-letter{
+    color: blue;
+}
+p::selection{
+    background-color: aqua;
+}
