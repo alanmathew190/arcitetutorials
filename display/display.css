@@ -38,6 +38,8 @@ img {
     height: 100px;
     background-color: aqua;
 
+    
+
 }
 
 .box {
@@ -45,7 +47,13 @@ img {
     justify-content: space-between;
     width: 500px;
 }
+#a{
+    background-image: linear-gradient(135deg, rgb(169, 24, 123) 30%, rgb(4, 211, 208) 100%);
+}
 
+#c{
+    background-image:repeating-linear-gradient(45deg, red, yellow,blue 10px)
+}
 #b {
     visibility: hidden;
 }
@@ -54,6 +62,7 @@ a {
     padding: 20px;
     color: rgb(199, 28, 28);
     font-size: 30px;
+   
 }
 
 a:hover {
@@ -72,4 +81,26 @@ h2::first-letter{
 }
 p::selection{
     background-color: aqua;
+}
+
+#d{
+    box-shadow:  1px 1px 40px 15px rgb(224, 118, 5);
+    border-radius: 50px;
+    background-image: radial-gradient(
+        orange,
+        yellow,
+        rgb(252, 15, 15)
+    );
+    margin: auto;
+    margin-top: 30px;
+}
+
+.fl{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    
+    background-color: rgb(197, 198, 199);
+    padding: 10px;
+    flex-wrap:  wrap;
 }
