@@ -1,0 +1,73 @@
+body{
+    background-image: linear-gradient(135deg,rgb(220, 195, 88) 10%, rgb(241, 197, 114) 50%, rgb(240, 167, 176) 100%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+h5,
+p {
+    margin: 0;
+    padding: 0; 
+}
+
+.profiles{
+    display: flex;
+    text-align: center;
+    width:60%;
+    justify-content: space-evenly;
+    margin: auto;
+    height: 96vh;
+}
+.profile{
+    height: fit-content;
+    width: fit-content;
+    padding: 15px 25px 10px 25px;
+    background-image: linear-gradient(135deg,rgb(151, 177, 223)0%, rgb(216, 221, 232) 100%);
+    border-radius:7px ;
+    box-shadow: 0 4px 8px 0 rgba(79, 78, 78, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+img{
+    height:40px;
+    width:40px;
+    border-radius:50%;
+    border: 2px solid white;
+}
+
+h5{
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+p{
+    font-size: 6px;
+    margin-top: 4px;
+}
+
+button{
+    background-color: rgb(55, 55, 238);
+    color: white;
+    border: none;
+    font-size: 6px;
+    border-radius: 20px;
+    padding: 4px 8px 4px 8px;
+    margin-top: 10px;
+}
+
+.r{
+    position: absolute;
+    right: 4px;
+    top:1px;
+    background-color: rgb(242, 56, 124);
+    color: white;
+    padding: 3px;
+    border-radius: 20px;
+    font-size: 5px;
+}
+
+.profile:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
