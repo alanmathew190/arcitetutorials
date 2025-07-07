@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(213, 213, 111);
+}
+
+@media(max-width: 900px){
+    body{
+        background-color: purple;
+    }
+}
+@media(min-width: 900px){
+    body{
+        background-color: turquoise;
+    }
+    
+    
+}
