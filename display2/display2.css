@@ -1,20 +1,40 @@
 body{
     background-image: linear-gradient(135deg,rgb(220, 195, 88) 10%, rgb(241, 197, 114) 50%, rgb(240, 167, 176) 100%);
     font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    height: 100vh;
+    position: relative;
 }
-h5,
+h5,h1,
 p {
     margin: 0;
     padding: 0; 
+    
 }
-
+header{
+    text-align: center;
+}
+header p{
+    font-size: 10px;
+    color: rgb(77, 163, 84);
+    animation: colors .5s infinite;
+}
+@keyframes colors{
+    from{
+        color: rgb(77, 163, 84);
+    }
+to{
+    color: rgb(216, 103, 103);
+}
+    
+}
 .profiles{
     display: flex;
     text-align: center;
     width:60%;
     justify-content: space-evenly;
     margin: auto;
-    height: 96vh;
+    margin-top: 20px;
 }
 .profile{
     height: fit-content;
@@ -27,6 +47,19 @@ p {
     flex-direction: column;
     align-items: center;
     position: relative;
+    box-shadow: 0 2px 0 0 rgb(75, 199, 64);
+    animation: rotate 3s infinite;
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+        left: -200px;
+    }
+    to{
+        transform: rotate(360deg);
+        left: 0px;
+    }
+;
 }
 
 img{
@@ -41,7 +74,7 @@ h5{
     font-size: 10px;
 }
 
-p{
+.profile p{
     font-size: 6px;
     margin-top: 4px;
 }
@@ -70,4 +103,63 @@ button{
 .profile:hover{
     transform: scale(1.05);
     transition: 0.3s;
+}
+
+h1{
+    font-family: Bitcount Grid Double;
+    letter-spacing: 10px;
+}
+
+span.An{
+    color: rgb(24, 167, 164);
+    position: relative;
+    animation: An 3s infinite;
+}
+
+@keyframes An {
+    from {
+        left:-60px;
+    }
+    to {
+        left:30px;
+        color: rgb(148, 182, 190);
+    } 
+}
+
+span.ime{
+    animation: ime 3s infinite;
+    position: relative;
+}
+
+span.fs {
+    animation: fs 3s infinite;
+    position: relative;
+}
+
+@keyframes ime {
+    from {
+        top: -60px;
+    }
+    to {
+        top: 0px;
+        color: rgb(229, 255, 0);
+    }
+}
+
+@keyframes Gi {
+    from {
+        bottom: 20px;
+    }
+    to {
+        top: 0px;
+    }
+}   
+
+@keyframes fs {
+    from {
+        right: -50px;
+    }
+    to {
+        right: 30px;
+    }
 }
