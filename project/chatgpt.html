@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, white 50%, black 50%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text-layer {
+            font-size: 4rem;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+            pointer-events: none;
+        }
+
+        .text-white {
+            color: white;
+            clip-path: polygon(0 50%, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        .text-black {
+            color: black;
+            clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Two overlapping clipped text layers -->
+    <h1 class="text-layer text-black">Diagonal Text</h1>
+    <!-- <h1 class="text-layer text-white">Diagonal Text</h1> -->
+</body>
+
+</html>
