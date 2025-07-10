@@ -49,6 +49,7 @@ a{
     transition: 1s;
     box-shadow: 1px 1px 5px 1px #c3e332;
     filter: none;
+    animation-play-state: paused;
 }
 .home p{
     width: fit-content;
@@ -59,6 +60,7 @@ a{
     bottom: 130px;
     background-color: rgb(0, 0, 0);
     color: white;
+    animation: b 2s linear;
 }
 
 .white {
@@ -66,6 +68,7 @@ a{
     left: 150px;
     background-color: rgb(255, 255, 255);
     color: black;
+    animation: a 2s linear;
 }
 
 .center-quote {
@@ -75,7 +78,6 @@ a{
     letter-spacing: 7px;
     margin-top: 250px;
     width:100%;
-    /* margin-left: 180px; */
 }
 .light {
     margin-left: -30%;
@@ -89,7 +91,25 @@ li{
     position: sticky;
     top:10px;
 }
- 
+
+@keyframes a{
+    from{
+        transform: translateY(-30px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes b{
+    from{
+        transform: translateY(30px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
 .v{
  margin: auto;
  color: white;
@@ -116,71 +136,114 @@ section{
     padding-bottom: 20px;
 }
 .about{
-    display: flex;
-    justify-content: space-evenly;
-    height: 450px;
-    
+    height: 850px;
 }
 #about{
-    background-image: radial-gradient(rgb(244, 237, 237), rgb(48, 47, 47));
+    background-image: linear-gradient(90deg,rgb(217, 215, 215), rgb(18, 18, 18));
 }
 #about h2,.quote, h2{
-    /* margin: auto; */
     text-align: center;
     letter-spacing: 7px;
 }
+
+.philosophy p{
+    margin: 0;
+    letter-spacing: 1px;
+}
+
 .philosophy{
-    width:25%;
-    height: 10px;
+    width:30%;
+    height: fit-content;
     overflow: hidden;
-    padding: 15px;
+    padding: 35px;
     font-style: italic;
     font-size: 20px;
     font-weight: 600;
     text-align: justify;
     box-shadow: 2px 3px 5px 2px #4e4e4e;
-    animation: v 2s 3;
     position: relative;
-    transition: 4s ease-in;
-    border-radius: 10px;
-    letter-spacing: 1px;
-    
+    border-radius: 20px;
+    animation: views both;
+    animation-timeline: view(100% 0%);
 }
+
 .philosophy:hover{
-    height: 430px;
     box-shadow: 1px 1px 5px 1px #c3e332;
-    animation: v 2s infinite;
+    z-index: 1;
 }
+@keyframes views{
+    from{
+        transform: translateX(-100px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+
 .black1{
     background-color: rgb(51, 51, 51);
     color: white;
+    left: 45%;
+    top: -400px;
 }
 .white1{
     background-color: rgb(190, 188, 188);
+    left: 25%;
 }
 .whitedark{
     background: linear-gradient(136deg, rgb(195, 193, 193) 50%, rgb(34, 34, 34) 50%);
+    left: 35%;
+    top: -200px;
 }
 #gallery{
+    /* background-color: #d0cfcf; */
+    background-image: radial-gradient(rgb(227, 223, 223)0%, rgb(52, 51, 51)60%,rgb(22, 21, 21) 100%);
+    color: white;
+}
+.banner {
+    width: 100%;
+    height: 100vh;
     text-align: center;
-    background-color: #f4efef;
+    position: relative;
 }
-.gallery{
-    padding: 20px;
-    margin: auto;
-    width: 70%;
-    row-gap: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+
+.banner .slider {
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    top: 15%;
+    left: calc(50% - 75px);
+    transform-style: preserve-3d;
+    animation: autoRun 20s linear infinite;
+    z-index: 2;
 }
-.pics{
-    width: 500px;
-    height: 250px;
+
+@keyframes autoRun {
+    from {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }
+    to {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
 }
-img{
+
+.banner .slider .item {
+    z-index: 1;
+    position: absolute;
+    inset: 0 0 0 0;
+    transform:
+        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) 
+        translateZ(450px);
+}
+
+.banner .slider .item img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+}
+.banner .slider .item:hover{
+    box-shadow: 1px 1px 5px 1px #c3e332;
+    transition: 1s;
 }
 
 .testimonials{
@@ -205,7 +268,13 @@ img{
     position: relative;
     width: 500px;
     filter: grayscale();
+    margin-bottom: 10px;
 }
+.testimonial:hover important{
+    filter: none;
+    animation-play-state: paused;
+}
+
 
  @keyframes u{
     0%{
@@ -223,11 +292,14 @@ img{
 .testimonial img{
     width: 300px;
     height: 300px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 4px 2px #4e4e4e;
 }
 #contact{
     background-color: rgb(1, 1, 1);
     color: white;
     padding: 20px;
+    margin-top: -15px;
 }
 #contact h2{
     text-align: center;
@@ -275,9 +347,15 @@ input,textarea{
 .social a{
     color:white;
 }
-footer,footer text{
-    
+footer,footer text{  
     text-align: center;
     height: 10px;
     font-size: 12px;
+}
+.cover{
+    width: 100%;
+    height: 20px;
+    background-color: rgb(1, 1, 1);
+    position: relative;
+    top: -12px;
 }
