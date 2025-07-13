@@ -338,14 +338,16 @@ input,textarea{
 .socials{
     margin-left:35%;
     width: 500px;
+    
 }
 .social p{
     border: solid;
     width: 270px;
     padding: 20px;
+    background-color: rgba(255, 252, 252, .2);
 }
 .social a{
-    color:white;
+    color:rgb(253, 251, 251);
 }
 footer,footer text{  
     text-align: center;
